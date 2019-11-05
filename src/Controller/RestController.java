@@ -2,6 +2,7 @@ package Controller;
 
 
 import jdk.internal.util.xml.impl.Input;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,10 +11,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.ProtocolException;
 import java.net.URL;
+import org.json.*;
 
 /**
  * Controller for sending GET request
- * COMMIT BITCH
+ *
  */
 
 public class RestController {
@@ -38,7 +40,7 @@ public class RestController {
 
     public void doSendGet(){
 
-        sendGet("dkrest/test/get");
+        sendGet("dkrest/test/get2");
     }
 
     /**
@@ -103,6 +105,12 @@ public class RestController {
             return response.toString();
 
         }
+
+        public static void convertToJSON(InputStream inputStream){
+
+
+        }
+
 
     }
 
