@@ -1,6 +1,7 @@
 package Controller;
 
 
+import Parser.JSONParser;
 import jdk.internal.util.xml.impl.Input;
 import org.json.JSONObject;
 
@@ -66,6 +67,9 @@ public class RestController {
                 String responseBody = convertStreamToString(inputStream);
                 inputStream.close();
                 System.out.println("Response from server: " + responseBody);
+
+                JSON
+
             } else {
                 String responseDescription = connection.getResponseMessage();
                 System.out.println("Request failed, response code: " + responseCode + " (" + responseDescription + ") ");
@@ -103,11 +107,6 @@ public class RestController {
             }
 
             return response.toString();
-
-        }
-
-        public static void convertToJSON(InputStream inputStream){
-
 
         }
 
