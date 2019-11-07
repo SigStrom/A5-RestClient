@@ -2,8 +2,6 @@ package Controller;
 
 
 import Parser.JSONParser;
-import jdk.internal.util.xml.impl.Input;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -71,12 +69,12 @@ public class RestController {
 
                 // Parse responseBody string as JSON object
                 JSONParser.parseJSON(responseBody);
+                // JSONParser.parseJSONArray(responseBody);
 
             } else {
                 String responseDescription = connection.getResponseMessage();
                 System.out.println("Request failed, response code: " + responseCode + " (" + responseDescription + ") ");
             }
-
 
         } catch (ProtocolException e) {
             System.out.println("Protocol not supported by the server");
