@@ -25,6 +25,7 @@ public class RestController {
     public static void main(String[] args){
         RestController restController = new RestController("datakomm.work", 80);
         restController.doSendGet();
+
     }
 
     private String BASE_URL; // URL of the server
@@ -68,7 +69,8 @@ public class RestController {
                 inputStream.close();
                 System.out.println("Response from server: " + responseBody);
 
-                JSON
+                // Parse responseBody string as JSON object
+                JSONParser.parseJSON(responseBody);
 
             } else {
                 String responseDescription = connection.getResponseMessage();
